@@ -1,0 +1,51 @@
+//==================================================================
+// Header Partial
+// Styles for header layout.
+//==================================================================
+
+// Header
+// =================================================================
+.site-header {
+	@include clearfix;
+	padding: 20px 0;
+	position: relative;
+	transition: all .3s ease;
+	
+}
+
+.site-title {
+	background: url('https://placeholdit.imgix.net/~text?txtsize=33&txt=Logo&w=350&h=150') no-repeat;
+	background-size: 200px;
+	display: block;
+	height: 80px;
+	width: 210px;
+	@include hide-text;
+	margin: 0 auto;
+	transition: all .3s ease;
+	@include media($tablet) {
+		float: left;
+		background-size: 300px;
+		height: 120px;
+		width: auto;
+	}
+}
+
+.menu-toggle {
+	text-transform: uppercase;
+	color: $brand_secondary;
+	text-decoration: none;
+	font-weight: 700;
+	float: right;
+	padding: 20px 2% 0 0;
+	&:before {
+		content:"";
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		position: relative;
+		top: 2px;
+		right: 5px;
+		background: url(../img/arrow.svg) no-repeat center;
+		background-size: 16px;
+	}
+}

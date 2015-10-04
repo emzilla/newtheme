@@ -1,0 +1,150 @@
+//==================================================================
+// Navigations Partial
+// Styles for various types of navigation componenets.
+//==================================================================
+
+// Primary Nav
+// =================================================================
+nav.primary {
+	position: absolute;
+	top: 0;
+	right: 0;
+	visibility: hidden;
+	width: 300px;
+	height: 100%;
+	transition: all 0.5s;
+}
+
+
+//Style inside of menu
+nav.primary .menu {
+	padding: 0;
+	margin: 0;
+	.menu-item {
+		list-style: none;
+		a {
+			text-transform: uppercase;
+			font-size: rem(16px);
+			padding: 20px;
+			display: block;
+			&:hover {
+				background: tint($brand_secondary, 10%);
+				color: $reverse_text_color;
+			}
+		}
+	&:last-child {
+		border-bottom: none;
+	}
+	}
+}
+
+.sub-menu {
+	display: none;
+	padding: 0 0 0 10px;
+	margin: 0;
+}
+
+.menuOpen {
+	nav.primary {
+		visibility: visible;
+		transition: all 0.5s;
+		z-index: 1;
+	}
+}
+
+
+.menu-push {
+	position: relative;
+	right: 0;
+	z-index: 99;
+	height: 100%;
+	transition: transform 0.5s;
+	background: #fff;
+}
+
+.menuOpen {
+	.menu-push {
+		transform: translate3d(-300px, 0, 0);
+	}
+}
+
+.menu-toggle {
+
+	&:hover {
+		background: none;
+	}
+}
+
+
+// Footer Nav
+// =================================================================
+nav.footer {}
+
+
+// Utility Nav
+// =================================================================
+nav.utility {}
+
+
+// Social Nav
+// =================================================================
+
+nav.social { 
+	@include span-columns(12);
+	@include omega;
+	@include media($tablet) {
+		@include span-columns(6);	
+	}
+	ul {
+		margin: 0;
+		@include media($desktop) {
+			float: right;
+		}
+	}
+	li {
+		display: inline-block;
+		float: left;
+		list-style: none;
+		margin: 0 10px;
+		a {
+			background-size: 40px;	
+			@include hide-text;
+			width: 40px;
+			height: 40px;
+			display: block;
+		}
+		&.twitter a {
+		background: url('../img/twitter.svg') no-repeat center;
+		}
+		&.dribbble a {
+			background: url('../img/dribbble.svg') no-repeat center;
+		}	
+		&.github a {
+			background: url('../img/github.svg') no-repeat center;
+		}	
+		&.instagram a {
+			background: url('../img/instagram.svg') no-repeat center;
+		}	
+		&.pinterest a {
+			background: url('../img/pinterest.svg') no-repeat center;
+		}	
+	}	
+}
+
+// Breadcrumbs
+// =================================================================
+.breadcrumbs {}
+
+
+// Pagination
+// =================================================================
+.pagination {
+	.menu {
+		padding: 20px 0;
+		list-style: none;
+		text-align: center;
+	}
+	.menu li {
+		display: inline-block;
+	}
+}

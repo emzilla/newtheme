@@ -1,0 +1,40 @@
+//==================================================================
+// Global Partial
+// Styles for global layout.
+//==================================================================
+
+// Global Layout
+// =================================================================
+body, html, .push-container {
+	height: 100%;
+}
+body {
+	-webkit-overflow-scrolling: touch;
+	background: $bg_color;
+}
+
+.header-container,
+.content-container,
+.footer-container {}
+
+.wrapper {
+	@include clearfix;
+	display: block;
+	@include media($desktop) {
+		max-width: $container_max_width;
+		margin: 0 auto;
+	}
+}
+
+.content-wrapper {
+	@include clearfix;
+	display: block;
+	@include media($desktop) {
+		max-width: $custom_content_width;
+		margin: 0 auto;
+	}
+}
+
+::selection {
+	background: $brand_primary;
+}

@@ -1,0 +1,50 @@
+//==================================================================
+// Tables Partial
+// Styles for tables and table componenets.
+//==================================================================
+
+
+// Tables
+// =================================================================
+table {
+	border-collapse: collapse;
+
+	// Global
+	// -------------------------------------------------------------
+	tr {
+	}
+	th, td {
+		padding: $table_cell_padding;
+		border: 1px solid $table_cell_border_color;
+	}
+	th {}
+
+
+	// Header Cells
+	// -------------------------------------------------------------
+	thead {}
+	thead th {}
+
+
+	// Body Cells
+	// -------------------------------------------------------------
+	tbody tr:nth-child(odd) {
+		background-color: $table_alt_row_background;
+	}
+
+		// Hover
+		tbody tr:hover {}
+		tbody tr:nth-child(even):hover {}
+
+
+	// Footer Cells
+	// -------------------------------------------------------------
+	tfoot {}
+	tfoot td {}
+
+		// Hover
+		tfoot tr:hover {}
+		tfoot tr:nth-child(even):hover {}
+
+
+}

@@ -1,0 +1,16 @@
+//==================================================================
+// Footer Partial
+// Styles for footer layout.
+//==================================================================
+
+// Footer
+// =================================================================
+.site-footer {
+	@include clearfix;
+	padding: 20px;
+	transition: all .3s ease;
+}
+
+.site-info {
+	text-align: center;
+}

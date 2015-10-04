@@ -1,0 +1,117 @@
+//==================================================================
+// Typography Partial
+// Styles for overall typography and misc. content components.
+//==================================================================
+
+
+// Custom Fonts
+// =================================================================
+@include font-face("avenir-book", "../fonts/avenir-book");
+@include font-face("avenir-black", "../fonts/avenir-black");
+
+
+
+// Global
+// =================================================================
+html, body {
+	font-family: $paragraph_font_family;
+	font-size: $paragraph_font_size;
+	color: $text_color;
+	line-height: $base_line_height;
+}
+hr {}
+
+
+// Headings
+// =================================================================
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: $header_color;
+}
+
+h1 {
+	font-size: $h1_font_size;
+	font-weight: $header_font_weight;
+	color: $brand_secondary;
+	text-transform: uppercase;
+	&.entry-title {
+		text-align: center;
+	}
+}
+
+
+h2 {
+	font-size: $h2_font_size;
+}
+
+h3 {
+	font-size: $h3_font_size;
+}
+
+h4 {
+	font-size: $h4_font_size;
+}
+
+
+
+
+// Paragraphs
+// =================================================================
+p {
+	&.small {
+		font-size: rem(13px);
+	}
+}
+strong {}
+
+
+// Links
+// =================================================================
+a {
+	color: tint($link_color, 10%);
+	text-decoration: none;
+	transition: all 0.4s ease;
+
+	&:hover {
+		color: $link_color_hover;
+	}
+	&:focus {
+		outline: none;
+	}
+}
+.content-wrapper a {
+	text-decoration: underline;
+}
+
+mark {
+	background: $brand_tertiary;
+}
+
+
+// Lists
+// =================================================================
+ul, ol, dl {}
+
+
+	// Unordered
+	//--------------------------------------------------------------
+	ul {}
+	ul li {}
+
+
+	// Ordered
+	//--------------------------------------------------------------
+	ol {}
+	ol li {}
+
+
+	// Definition
+	//--------------------------------------------------------------
+	dl {}
+	dt {}
+	dd {}
+
+
+// Blockquotes
+// =================================================================
+blockquote {}

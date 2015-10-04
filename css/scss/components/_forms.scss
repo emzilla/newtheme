@@ -1,0 +1,103 @@
+//==================================================================
+// Forms Partial
+// Styles for various forms and form elements.
+//==================================================================
+
+// Variables
+// =================================================================
+
+
+// Wrappers
+// =================================================================
+form {}
+
+
+	// Legend
+	//--------------------------------------------------------------
+	legend {}
+
+
+	// Fieldsets / Wrappers
+	//--------------------------------------------------------------
+	fieldset {}
+
+		.field, .fieldpair, .fieldgroup {}
+		.fieldpair, .fieldgroup {}
+
+		// Field Pair
+		.fieldpair > .field {}
+		.fieldpair > .field:first-child {}
+
+		// Field Group
+		.fieldgroup .field {}
+
+
+	// Checkboxes & Radios
+	//--------------------------------------------------------------
+	.checkboxes, .radios {
+
+		ul {}
+		input + label {}
+
+	}
+
+
+	// Labels
+	//--------------------------------------------------------------
+	label {}
+
+		// Fieldgroup Label
+		.fieldgroup-label {}
+
+		// Checkbox, Radio Labels
+		.fieldgroup-label + ul,
+		.fieldgroup-label + ol {}
+		.fieldgroup-label + ul li,
+		.fieldgroup-label + ol li,
+		.fieldgroup-label + ul label,
+		.fieldgroup-lable + ol label {}
+
+
+	// Fields
+	//--------------------------------------------------------------
+	input {
+		
+		// Checkbox & Radio
+		&[type="checkbox"], &[type="radio"] {}
+		&[type="checkbox"]:focus, &[type="radio"]:focus {}
+
+		// Search
+		&[type="search"] {}
+		&[type="search"]::-ms-clear {
+			display: none;
+		}
+
+		// File
+		&[type="file"] {}
+
+		// Focus
+		&:focus {}
+
+	}
+
+
+	// Custom Checkboxes + Radios
+	//--------------------------------------------------------------
+	:root {
+
+		// Common
+		.radio label,
+		.checkbox label {}
+		.checkbox input[type="checkbox"],
+		.radio input[type="radio"] {}
+
+		// Custom Radios
+		.radio label:before {}
+		.radio input[type="radio"]:checked + label:before {}
+		.radio input[type="radio"]:checked + label:after {}
+
+		// Custom Checkbox
+		.checkbox label:before {}
+		.checkbox input[type="checkbox"]:checked + label:before {}
+
+	}
